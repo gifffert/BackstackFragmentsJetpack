@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_notify"
+    app:startDestination="@id/notificationsFragment">
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="ru.embersoft.handlebackstack.ui.notifications.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_notificationsFragment_to_detailNotifyFragment"
+            app:destination="@id/detailNotifyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailNotifyFragment"
+        android:name="ru.embersoft.handlebackstack.DetailNotifyFragment"
+        android:label="Notifications Detail"
+        tools:layout="@layout/fragment_detail_notify" />
+</navigation>
